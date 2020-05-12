@@ -1188,10 +1188,6 @@ input[type="radio"]:disabled+.size__btn-radio:hover {
       max-width: 800px;
   }
 
-  .fade-slider__text {
-    /* transform: translate(-205%, 75%); */
-  }
-
   .lined-text--style-games {
     transform: translate(-20%, 75%);
   }
