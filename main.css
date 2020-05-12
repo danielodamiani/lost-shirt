@@ -1196,7 +1196,16 @@ input[type="radio"]:disabled+.size__btn-radio:hover {
     transform: translate(-240%, 105%);
   }
 
- 
+  .fade-slider__item .fade-slider__text--style-games {
+    top: 870px;
+    right: 700px;
+}
+
+.fade-slider__item .fade-slider__text--style-thirts {
+  left: 515px;
+  top: 800px;
+}
+
   .container__products {
     margin: 50px 180px;
   }
