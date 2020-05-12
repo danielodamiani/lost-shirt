@@ -1189,7 +1189,7 @@ input[type="radio"]:disabled+.size__btn-radio:hover {
   }
 
   .fade-slider__text {
-    transform: translate(-205%, 75%);
+    /* transform: translate(-205%, 75%); */
   }
 
   .lined-text--style-games {
