@@ -303,9 +303,9 @@ transition: opacity .3s;
 
 .fade-slider__text--header__guys {
     position: absolute;
-    left: 47%;
-    top: 100px;
-    transform: translate(-150%, -40%);   
+    /* left: 47%;
+    top: 100px; */
+    transform: translate(-153%, -67%);   
     
 }
 
