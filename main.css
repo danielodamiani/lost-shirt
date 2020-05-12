@@ -23,7 +23,12 @@ margin: 0;
     overflow: hidden;
     /* скрытиe элементов переполнения*/
 
-    min-width: 1310px;
+    min-width: 1540px;
+}
+
+.wrapper__product {
+    height: 180px;
+    margin-bottom: 100px;
 }
 
 .container {
@@ -73,6 +78,14 @@ display: flex;
 justify-content: space-between;
 align-items: center; /* выравнивание относительно центра */
 padding-top: 27px;
+}
+
+.header__product {
+    background: url(img/bg/hero.jpg) center center / cover no-repeat;
+    margin-bottom: 90px;
+    height: 180px;
+    width: auto;
+    padding: 0 150px;
 }
 
 .mail {
@@ -215,6 +228,10 @@ opacity: 0;
 transition: opacity .3s;
 }
 
+.fade-slider__item-product {
+    url
+}
+
 .fade-slider__item--visible {
     opacity: 1;
 }
@@ -241,6 +258,14 @@ transition: opacity .3s;
 /* отступы для каждой второй строчки */
 .lined-text--indent .lined-text__word:nth-child(2n) {
     margin-left: 8px;
+}
+
+.lined-text--header__guys .lined-text__word:nth-child(2n) {
+    margin-left: 8px;
+}
+
+.lined-text--header__guys .lined-text__word {
+    padding: 3px 10px 5px;
 }
 
 .fade-slider__item--style-games {
@@ -276,6 +301,14 @@ transition: opacity .3s;
     transform: translate(-164%, -52%);    
 }
 
+.fade-slider__text--header__guys {
+    position: absolute;
+    left: 47%;
+    top: 100px;
+    transform: translate(-150%, -40%);   
+    
+}
+
 .lined-text {
 font-family: "alegreya", Arial, sans-serif;
 color: #fff;
@@ -295,6 +328,16 @@ align-items: flex-start;
    margin-left: 0;
 }
 
+.lined-text--header__guys {
+    font-size: 30px;
+}
+
+.header__guys {
+  position: relative;
+    margin-top: 70px;
+    margin-right: -160px;
+}
+
 .lined-text__word {
 background: #000;
 padding: 0 17px 8px;
@@ -307,10 +350,6 @@ white-space: nowrap;
 .lined-text__word--color-yellow {
 color:  var(--yellow);   
 }
-
-/* .lined-text__word:nth-child(2n) {
-margin-left: 8px;
-} */
 
 /* products */
 
@@ -619,10 +658,10 @@ margin-left: 8px;
 }
 
 .site-menu__text-row {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 5px;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
 }
 
 /* extras */
@@ -690,3 +729,492 @@ margin-left: 8px;
     width: 100%;
     height: 100%;
 }
+
+/* product.html */
+
+.container__products {
+  width: 1118px;
+}
+
+.tshirts-choice {
+  display: flex;
+  border: 10px solid var(--yellow);
+  margin-bottom: 95px;
+}
+
+.tshirts-choice__col {
+  flex: 1;
+  position: relative;
+}
+
+.tshirts-choice__item {
+  background: var(--yellow);
+  position: absolute;
+  width: 548px;
+  height: 738px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tshirts-choice__img {
+  display: block;
+  max-width: 90%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.tshirts-options__brand {
+  font-size: 17px;
+  font-weight: bold;
+  font-family: var(--titlesFont);
+  color: var(--yellow);
+}
+
+.tshirts-options__name {
+  color: var(--black);
+    font-size: 45px;
+    text-transform: uppercase;
+    font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.tshirts-options__price {
+  background: var(--yellow);
+  width: 95px;
+}
+
+.tshirts-options__price--amount {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: var(--titleFont);
+  color: #212121;
+  text-align: center;
+}
+
+
+.tshirts-options__info, .tshirts-options__about {
+  border-bottom: 2px solid #e0d9c8;
+  padding: 30px;
+}
+
+.tshirts-options__item {
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.tshirts-options__item:last-child {
+  margin-bottom: 0;
+}
+
+.tshirts-choice__btn {
+  font-size: 28px;
+  padding: 5px 70px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.tshirts-choice__size {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+}
+
+.size__btn input {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+.size__btn {
+  margin-right: 10px;
+}
+
+.size__btn:last-child {
+  margin-right: 0;
+}
+
+.size__btn-radio {
+  display: inline-block;
+  border: 1px solid #e0d9c8;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  height: 48px;
+  min-width: 48px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.size__btn-radio:hover {
+background-color: var(--yellow);
+}
+
+input[type="radio"]:checked+.size__btn-radio {
+  background-color: var(--yellow);
+}
+
+input[type="radio"]:disabled+.size__btn-radio {
+  color: #e0d9c8;
+}
+
+input[type="radio"]:disabled+.size__btn-radio:hover {
+  background-color:  initial;
+}
+
+
+.color__btn input {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.color__btn {
+  margin-right: 20px;
+}
+
+.color__btn:last-child {
+  margin-right: 0;
+}
+
+.color__btn-radio {
+  display: inline-block;
+  border: 1px solid #e0d9c8;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 25px;
+  min-width: 25px;
+  position: relative;
+}
+
+.color__btn input:checked + label:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  border-radius: 50%;
+  border: 3px solid #ffcf48;
+}
+
+.color__btn-radio--black {
+  background-color: var(--black);
+}
+
+.color__btn-radio--white {
+  background-color: #fcf5e6;
+}
+.color__btn-radio--green {
+  background-color: #529029;
+}
+.color__btn-radio--blue {
+  background-color: #39498d;
+}
+.color__btn-radio--red {
+  background-color: var(--red);
+}
+
+.color__btn-radio:hover:after {
+  border-color: var(--yellow);
+}
+
+.color__btn--checked:before {
+content: '';
+display: inline-block;
+position: absolute;
+width: 25px;
+height: 25px;
+border: 3px solid var(--yellow);
+border-radius: 50%;
+z-index: 1;
+transform: translate(-3px, -3px);
+} 
+
+.information {
+  margin-bottom: 90px;
+}
+
+.information__list {
+  position: relative;
+  margin-left: 60px;
+}
+
+.information__item {
+  display: flex;
+  border: 10px solid var(--yellow);
+  position: absolute;
+  background-color: #fcf5e6;
+}
+
+.information__item-col {
+  border-right: 2px solid #e0d9c8;
+  padding-bottom: 20px 0;
+  padding: 20px 0;
+}
+
+.information__item-col:last-child {
+  border-right: 0;
+}
+
+.information__item-col-right {
+  flex: 2;
+  padding: 45px;
+}
+
+.desc__item {
+  display: flex;
+  margin: -10px 20px;
+}
+
+.desc__item:last-child {
+  margin-bottom: -30px;
+} 
+
+.desc__list {
+  padding: 30px 0;
+}
+
+.desc__item_pic {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.desc__icon {
+  width: 100%;
+  height: 100%;
+}
+
+.desc__item_text {
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.delivery__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 45px 75px;
+}
+
+
+.information__item-col--left {
+  flex-basis: 33%;
+  padding: 0;
+}
+  
+.information__item-col--table {
+  flex: 2;
+  padding: 0;
+}
+
+.size-table__image {
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 35px -16px;
+}
+
+.size-table__image-pic {
+  width: 80%;
+}
+
+.size-table__list {
+  font-size: 12px;
+
+}
+
+.size-table__desc {
+  width: 70%;
+  margin: auto;
+}
+.size-table__item {
+  margin-top: 10px;
+}
+
+.table-size {
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.table-name {
+width: 18%;
+}
+
+
+td {
+  border: 1px solid #e0d9c8;
+  padding: 21px 10px;
+  width: 10%;
+  text-align: center;
+} 
+
+.table-name--color {
+  background-color: #f6efe0;
+  font-weight: bold;
+}
+
+.brand__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 45px 75px;
+}
+
+
+.delivery__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 45px 75px;
+}
+
+.brand__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 45px 75px;
+}
+
+.tshirts-choice__color {
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.color__btn input {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.color__btn:last-child {
+  margin-right: 0;
+}
+
+.color__btn-radio {
+  display: inline-block;
+  border: 1px solid #e0d9c8;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 25px;
+  min-width: 25px;
+  position: relative;
+}
+
+.color__btn-radio--black {
+  background-color: var(--black);
+}
+
+.color__btn-radio--white {
+  background-color: #fcf5e6;
+}
+.color__btn-radio--green {
+  background-color: #529029;
+}
+.color__btn-radio--blue {
+  background-color: #39498d;
+}
+.color__btn-radio--red {
+  background-color: var(--red);
+}
+
+.color__btn-radio:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  left: -7px;
+  bottom: -7px;
+}
+
+
+.information__item-col {
+  border-right: 2px solid #e0d9c8;
+  
+}
+
+.information__item-col:last-child {
+  border-right: 0;
+}
+
+.information__item-col-right {
+flex: 2;
+padding: 45px;
+}
+
+
+.size__btn-radio:hover {
+    background-color: var(--yellow);
+  }
+    
+input[type="radio"]:checked+.size__btn-radio {
+      background-color: var(--yellow);
+  }
+    
+input[type="radio"]:disabled+.size__btn-radio {
+  color: #e0d9c8;
+  }
+    
+input[type="radio"]:disabled+.size__btn-radio:hover {
+    background-color:  initial;
+  }
+
+
+.ruble__item {
+  font-size: 17px;
+}
+
+.desc__item_text-delivery {
+  margin-bottom: -25px;
+}
+
+/* media */
+@media screen and (max-width:1310px){
+  
+  .hero__content{
+      max-width: 800px;
+  }
+
+  .fade-slider__text {
+    transform: translate(-205%, 75%);
+  }
+
+  .lined-text--style-games {
+    transform: translate(-20%, 75%);
+  }
+
+  .fade-slider__text--style-present {
+    transform: translate(-240%, 105%);
+  }
+
+ 
+  .container__products {
+    margin: 50px 180px;
+  }
+
+  .container__tshirt {
+    margin: 7%;
+  }
+
+  .container__collections {
+    margin: 7%;
+  }
+  
+  .footer__container {
+    margin: 50px 180px;
+  }
+}
+
